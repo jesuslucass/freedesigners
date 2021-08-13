@@ -137,20 +137,60 @@ nav ul li a:hover{
     flex-direction: column;
     margin-top: 24px;
     }
+.form-container > .tip {
+	margin-top: 4px;
+	border: 1px solid sandybrown;
+	color: sandybrown;
+	flex: 1;
+	padding: 8px 16px;
+	background: cornsilk;
+	border-radius: 4px;
+	transition: linear visibility 0.2s, opacity 0.5s;
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	transform: translateY(62px);
+}
+.form-container:hover > span {
+	opacity: 1;
+	visibility: visible;
+}
+.msg-error {
+	color: #f44336;
+}
 .btn-container{
     display: flex;
     justify-content: flex-end;
     margin-top: 24px;
 
 }
-.primary{background: #bd465f;
+.btn{
+    border-radius: 4px;
+	padding: 16px 64px;
+	border: 0;
+	text-decoration: none;
+}
+
+.btn-primary{background: #bd465f;
     color:#fff;
     border: 0;
     border-radius: 4px;
     padding: 16px 64px;
     transition: background-color 0.5s;
-
+    text-decoration: none;
 }
+.btn-primary:hover{
+    background: #cc7084;
+}
+.btn-table{
+    padding: 8px 24px;
+}
+.primary{background: #bd465f;
+    color:#fff;
+    border: 0;
+    border-radius: 4px;
+    padding: 16px 64px;
+    transition: background-color 0.5s;}
 .secundary{background: transparent;
     color:#bd465f;
     border: 0;
@@ -177,17 +217,45 @@ textarea.form-control{
     border: 1px solid #e2e3ef;
     padding: 8px 16px;
     transition: border-color 0.5s;}
-.form-control:focus{
-    border-color: #555;
-}
+    
 
 .form-label{
     color: #2d2d30;
     margin: 0 0 4px 2px;
 }
-.form-control:valid:not(textarea){
+.valido{
     border-color: #4caf50;
 }
-/*.form-control:invalid:not(textarea){
+
+.invalido{
     border-color: #cf2626;
-}*/
+}
+
+.tabela-precos{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 80px;
+}
+.tabela-precos-cabecalho th{
+    font-size: 24px;
+    color: #bd465f;
+}
+.tabela-precos-info td{
+    font-size: 20px;
+}
+.tabela-precos-info tr:nth-child(even) {
+    background: #dbdbdb;
+}
+.tabela-precos-info tr:last-child(even) {
+    background: #dbdbdb;
+}
+th,td{
+    border-bottom: px dotted #555;
+    padding: 10px;
+}
+tfoot > tr >  td{
+    border: 0;
+    text-align: center;
+    padding-top: 25px;
+
+}
